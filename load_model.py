@@ -18,10 +18,10 @@ class ModelFactory:
 
         model = models[model_name]
 
-        scaler = preprocessing.MinMaxScaler()
+        # scaler = preprocessing.MinMaxScaler()
 
         if transformer is None:
-            return compose.Pipeline(scaler, model)
+            return model
 
-        return compose.Pipeline(transformer, scaler, model)
+        return compose.Pipeline(transformer, model)
 
