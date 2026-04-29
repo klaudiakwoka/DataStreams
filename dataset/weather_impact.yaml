@@ -1,0 +1,41 @@
+weather:
+  types: ["clear", "rain", "snow", "fog"]
+
+  impact:
+    clear: 1.0
+    rain: 1.25
+    snow: 1.6
+    fog: 1.15
+
+  seasons:
+    winter:
+      months: [12, 1, 2]
+      probs:
+        clear: 0.45
+        rain: 0.25
+        snow: 0.15
+        fog: 0.15
+
+    spring:
+      months: [3, 4, 5]
+      probs:
+        clear: 0.50
+        rain: 0.30
+        snow: 0.00
+        fog: 0.20
+
+    summer:
+      months: [6, 7, 8]
+      probs:
+        clear: 0.65
+        rain: 0.15
+        snow: 0.00
+        fog: 0.20
+
+    autumn:
+      months: [9, 10, 11]
+      probs:
+        clear: 0.35
+        rain: 0.45
+        snow: 0.00
+        fog: 0.20
