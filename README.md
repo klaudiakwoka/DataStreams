@@ -4,10 +4,10 @@ This project explores machine learning methods for data streams, focusing on the
 
 The repository is organized as follows:
 
-- `dataset/` - synthetic dataset and scripts for its generation
-- `results/` – computed model predictions
+- `dataset/` - real and synthetic datastes, scripts for their generation or preprocessing
+- `ensemble/` – implementation of adaptive regression ensemble
+- `results/` – computed results
 - `plots/` – visualizations of experimental results
-- All notebooks (`Taxis_drift_experiment.ipynb`, `Airplanes_drift_experiment.ipynb`, `preds_taxis.ipynb`, `preds_airplanes.ipynb`) contain the conducted experiments
 
 Real datasets:
 - [Taxi dataset (2016 NYC Yellow Cab trip record data)](https://www.kaggle.com/competitions/nyc-taxi-trip-duration)
