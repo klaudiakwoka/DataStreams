@@ -3,3 +3,5 @@ osmnx
 pyyaml
 geopy
 tqdm
+geopandas
+ipywidgets
