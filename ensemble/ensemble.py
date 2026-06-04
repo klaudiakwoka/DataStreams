@@ -63,11 +63,11 @@ class DriftAdaptiveEnsemble(base.Regressor):
     def __init__(
         self,
         base_estimator: base.Regressor,
-        max_ensemble_size: int = 5,
-        retain_initial_model: bool = True,
         drift_detector: base.DriftDetector,
         warning_detector: base.DriftDetector,
         metric: base.Metric,
+        max_ensemble_size: int = 5,
+        retain_initial_model: bool = True,
         prediction_strategy: Literal["mean", "weighted_mean"] = "mean",
         warmup: int = 1000,
         window_size: int = 500
@@ -104,7 +104,7 @@ class DriftAdaptiveEnsemble(base.Regressor):
         self._error_window = deque(maxlen=window_size)
 
     # learn one method
-    def learn_one(self, x, y, timestamp):
+    def learn_one(self, x, y, timestamp=None):
         self._n_seen += 1
 
         # predict
@@ -134,7 +134,7 @@ class DriftAdaptiveEnsemble(base.Regressor):
     def predict_one(self, x):
         return self._aggregate(x)
 
-    def _handle_drift_signal(self, timestamp):
+    def _handle_drift_signal(self, timestamp=None):
         """Handle warning and drift signals from the detector"""
 
         # drift detected
@@ -173,7 +173,7 @@ class DriftAdaptiveEnsemble(base.Regressor):
                 "ensemble_ids": [m.member_id for m in self._members]
             })
 
-    def _promote_shadow(self, timestamp):
+    def _promote_shadow(self, timestamp=None):
         """Add the shadow model to the ensemble, removing the worst if there is already max model capacity"""
         if self._shadow_member is None:
             return
