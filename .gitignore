@@ -1,2 +1,6 @@
 .idea
-.DStore
+.DS_Store
+.ipynb_checkpoints
+dataset/*.csv
+*/__pycache__/
+dataset/.DS_Store
