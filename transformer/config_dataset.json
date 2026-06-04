@@ -1,0 +1,75 @@
+{
+"Airplanes": {
+        "district_list": ["South", "West", "Northeast", "Midwest", "Global"],
+
+        "error_window_config": {
+            "South": 2000,
+            "West": 2000,
+            "Midwest": 300,
+            "Northeast": 200,
+            "Global": 1000
+        },
+
+        "adwin_configs": {
+            "South": {"delta": 0.0005},
+            "West": {"delta": 0.001},
+            "Midwest": {"delta": 0.001},
+            "Northeast": {"delta": 0.0002},
+            "Global": {"delta": 0.0001}
+        },
+
+        "columns_to_drop": ["Month","DayofMonth","DayOfWeek","origin_state","dest_state","DepTime"],
+
+        "WARMUP_DAYS": 10,
+        "PH_THRESHOLD": 0.01,
+        "PH_MIN_INSTANCES": 30,
+        "PH_ALPHA": 0.999
+    },
+
+"Taxi": {
+        "district_list": ["Manhattan", "Queens", "Brooklyn", "Global"],
+
+        "error_window_config": {
+            "Manhattan": 2500,
+            "Queens": 30,
+            "Brooklyn": 20,
+            "Global": 300
+        },
+
+        "adwin_configs": {
+            "Manhattan": {"delta": 0.0005},
+            "Queens": {"delta": 0.001},
+            "Brooklyn": {"delta": 0.001},
+            "Global": {"delta": 0.0001}
+        },
+
+        "columns_to_drop": ["id","vendor_id", "store_and_fwd_flag", "passenger_count","pickup_datetime","dropoff_datetime"],
+
+        "WARMUP_DAYS": 10,
+        "PH_THRESHOLD": 0.01,
+        "PH_MIN_INSTANCES": 30,
+        "PH_ALPHA": 0.999
+    },
+"Warsaw": {
+        "district_list": ["Left", "Right", "Global"],
+
+        "error_window_config": {
+            "Left": 222,
+            "Right": 140,
+            "Global": 400
+        },
+
+        "adwin_configs": {
+            "Left": {"delta": 0.0005},
+            "Right": {"delta": 0.001},
+            "Global": {"delta": 0.001}
+        },
+
+        "columns_to_drop": ["day_of_week","pickup_d","dropoff_d"],
+
+        "WARMUP_DAYS": 30,
+        "PH_THRESHOLD": 2,
+        "PH_MIN_INSTANCES": 10,
+        "PH_ALPHA": 0.9
+    }
+}
