@@ -44,7 +44,7 @@ class FeatureDistrict(base.Transformer):
  
 
         if self.dataset == 'Taxi':
-            nyc_boroughs = gpd.read_file("nybb.shp").to_crs(epsg=4326)
+            nyc_boroughs = gpd.read_file("nybb_16b/nybb.shp").to_crs(epsg=4326)
             self.boroughs_list = [(row['geometry'], row['BoroName'])
                 for i, row in nyc_boroughs.iterrows()
             ]
