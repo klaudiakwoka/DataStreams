@@ -94,7 +94,7 @@ class FeatureDistrict(base.Transformer):
             pickup_d  = self.get_region_taxi(x["pickup_latitude"],  x["pickup_longitude"])
             dropoff_d = self.get_region_taxi(x["dropoff_latitude"], x["dropoff_longitude"])
  
-        elif self.dataset=='Airplanes':
+        elif self.dataset=='Airplanes' or self.dataset=='Synthetic_airplanes':
             x = self.timestamp_airplanes(x)
             pickup_d  = self.get_region_airplanes(x["origin_state"])
             dropoff_d = self.get_region_airplanes(x["dest_state"])
