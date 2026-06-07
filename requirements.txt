@@ -5,3 +5,4 @@ geopy
 tqdm
 geopandas
 ipywidgets
+kagglehub
