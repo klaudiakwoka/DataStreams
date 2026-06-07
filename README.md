@@ -1,6 +1,6 @@
 # DataStreams
 
-This project explores machine learning methods for data streams, focusing on the regression task of predicting travel time across different transportation modes, such as taxis and airplanes. 
+This project explores machine learning methods for data streams, focusing on the regression task of predicting travel time and delay across different transportation modes, such as taxis and airplanes. 
 
 The repository is organized as follows:
 
