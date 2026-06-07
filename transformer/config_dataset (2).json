@@ -50,5 +50,23 @@
         "PH_THRESHOLD": 5,
         "PH_MIN_INSTANCES": 30,
         "PH_ALPHA": 0.95
+    },
+"Synthetic_airplanes": {
+        "district_list": ["South", "West", "Northeast", "Midwest", "Global"],
+        
+        "DISTRICTS_SETTINGS": {
+            "South": {"delta_w": 0.5, "delta_c": 0.05, "window": 4000},    
+            "West": {"delta_w": 0.5, "delta_c": 0.05, "window": 4000},         
+            "Midwest": {"delta_w": 0.5, "delta_c":  0.05, "window": 600},    
+            "Northeast": {"delta_w": 0.5, "delta_c": 0.02, "window": 400},    
+            "Global": {"delta_w": 0.5, "delta_c": 0.01, "window": 2000}      
+        },
+
+        "columns_to_drop": ["Month","DayofMonth","DayOfWeek","origin_state","dest_state","DepTime"],
+
+        "WARMUP_DAYS": 30,
+        "PH_THRESHOLD": 2,
+        "PH_MIN_INSTANCES": 1,
+        "PH_ALPHA": 0.995
     }
 }
