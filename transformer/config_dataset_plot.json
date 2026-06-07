@@ -1,0 +1,45 @@
+{
+"Airplanes": {
+        "district_list": ["South", "West", "Northeast", "Midwest", "Global"],
+        
+        "DISTRICTS_SETTINGS": {
+            "South": {"window": 6000},    
+            "West": { "window": 6000},         
+            "Midwest": {"window": 1000},    
+            "Northeast": { "window": 600},    
+            "Global": {"window": 3000}      
+        }
+    },
+
+"Taxi": {
+        "district_list": ["Manhattan", "Queens", "Brooklyn", "Global"],
+
+        "DISTRICTS_SETTINGS": {
+            "Manhattan": { "window": 10000},    
+            "Queens": {"window": 100},         
+            "Brooklyn": { "window": 60},    
+            "Global": {"window": 2000} 
+        }
+    },
+"Warsaw": {
+        "district_list": ["Left", "Right", "Global"],
+
+        "DISTRICTS_SETTINGS": {
+            "Left": { "window": 222},    
+            "Right": {"window": 140},           
+            "Global": { "window": 400} 
+        }
+    },
+
+"Synthetic_airplanes": {
+        "district_list": ["South", "West", "Northeast", "Midwest", "Global"],
+        
+        "DISTRICTS_SETTINGS": {
+            "South": {"window": 4000},    
+            "West": { "window": 4000},         
+            "Midwest": {"window": 600},    
+            "Northeast": { "window": 400},    
+            "Global": { "window": 2000}      
+        }
+    }
+}
