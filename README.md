@@ -5,7 +5,8 @@ This project explores machine learning methods for data streams, focusing on the
 The repository is organized as follows:
 
 - `dataset/` - real and synthetic datastes, scripts for their generation or preprocessing
-- `transformer/` - transformation of the datasets .csv files into stream, config files
+- `transformer/` - config files, class transformer which map the incoming observation into regions
+- `utils/` - transformation of the datasets .csv files into stream
 - `ensemble/` – implementation of adaptive regression ensemble
 - `centroid_drift/` – implementation of centroid drift detector
 - `results/` – computed results
@@ -13,6 +14,7 @@ The repository is organized as follows:
 - `plots/` – visualizations of experimental results
 - `initial_experiments/` – initial scripts with experiments
 - `nybb_16b/` – folder with geojson files for division into districts of Taxi dataset
+  
   
   
 
