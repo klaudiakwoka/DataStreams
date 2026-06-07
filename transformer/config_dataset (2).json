@@ -1,0 +1,54 @@
+{
+"Airplanes": {
+        "district_list": ["South", "West", "Northeast", "Midwest", "Global"],
+        
+        "DISTRICTS_SETTINGS": {
+            "South": {"delta_w": 0.005, "delta_c": 0.0005, "window": 4000},    
+            "West": {"delta_w": 0.05, "delta_c": 0.00001, "window": 4000},         
+            "Midwest": {"delta_w": 0.005, "delta_c":  0.00001, "window": 600},    
+            "Northeast": {"delta_w": 0.005, "delta_c": 0.00001, "window": 400},    
+            "Global": {"delta_w": 0.005, "delta_c": 0.00001, "window": 2000}      
+        },
+
+        "columns_to_drop": ["Month","DayofMonth","DayOfWeek","origin_state","dest_state","DepTime"],
+
+        "WARMUP_DAYS": 30,
+        "PH_THRESHOLD": 2,
+        "PH_MIN_INSTANCES": 1,
+        "PH_ALPHA": 0.95
+    },
+
+"Taxi": {
+        "district_list": ["Manhattan", "Queens", "Brooklyn", "Global"],
+
+        "DISTRICTS_SETTINGS": {
+            "Manhattan": {"delta_w": 0.5, "delta_c": 0.005, "window": 3000},    
+            "Queens": {"delta_w": 0.5, "delta_c": 0.001, "window": 30},         
+            "Brooklyn": {"delta_w": 0.5, "delta_c":  0.01, "window": 20},    
+            "Global": {"delta_w": 0.5, "delta_c": 0.001, "window": 400} 
+        },
+
+        "columns_to_drop": ["id","vendor_id", "store_and_fwd_flag", "passenger_count","pickup_datetime","dropoff_datetime"],
+
+        "WARMUP_DAYS": 30,
+        "PH_THRESHOLD": 2,
+        "PH_MIN_INSTANCES": 30,
+        "PH_ALPHA": 0.95
+    },
+"Warsaw": {
+        "district_list": ["Left", "Right", "Global"],
+
+        "DISTRICTS_SETTINGS": {
+            "Left": {"delta_w": 0.05, "delta_c": 0.0001, "window": 222},    
+            "Right": {"delta_w": 0.05, "delta_c": 0.0001, "window": 140},           
+            "Global": {"delta_w": 0.05, "delta_c": 0.0001, "window": 400} 
+        },
+
+        "columns_to_drop": ["day_of_week","pickup_d","dropoff_d"],
+
+        "WARMUP_DAYS": 30,
+        "PH_THRESHOLD": 5,
+        "PH_MIN_INSTANCES": 30,
+        "PH_ALPHA": 0.95
+    }
+}
