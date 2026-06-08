@@ -6,3 +6,4 @@ tqdm
 geopandas
 ipywidgets
 kagglehub
+river
